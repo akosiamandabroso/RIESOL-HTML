@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+    background: 0;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 15px;
+    transition: color 0.3s ease;
+    margin-right: 70px;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 47);
+    background-color: rgba(255, 255, 255, 0.584); 
+    padding: 8px 12px; 
+}
+
+nav ul li a:active {
+    background-color: rgba(255, 255, 255, 0.584); 
+    color: rgb(0, 0, 47);
+    padding: 8px 12px; 
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid rgb(22, 0, 96);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.5s; 
+    box-sizing: border-box; 
+    border-radius: 30px;
+}
+
+.explore-btn:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(18, 0, 68);
+}
+
+.slide .content {
+    text-align: center;
+}
+
+.slide h1 {
+    font-size: 5vw; 
+    font-weight: 600;
+    max-width: 90%;
+    color: #ffffff;
+    margin: 0 auto; 
+}
+
+.slide h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.gray-slide {
+    display: none;
+}
+
+.gray-slide.active {
+    display: flex;
+}
